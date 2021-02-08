@@ -19,6 +19,10 @@ config/name="Top-Down-Simple-Game"
 run/main_scene="res://src/World.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+mouse_cursor/custom_image="res://assets/crosshairs/crosshair038.png"
+
 [input]
 
 move_left={
