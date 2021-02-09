@@ -4,7 +4,7 @@
 [ext_resource path="res://src/player/Player.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-height = 24.0223
+height = 18.0088
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 2
