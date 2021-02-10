@@ -65,9 +65,6 @@ points = PoolVector2Array( 48, 0, 48, 0, 64, 0, 64, 64, 0, 64, 0, 48, 48, 48 )
 [sub_resource type="ConvexPolygonShape2D" id=20]
 points = PoolVector2Array( 0, 0, 0, 0, 64, 0, 64, 64, 0, 64, 0, 48, 48, 48, 48, 16, 0, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=21]
-points = PoolVector2Array( 16, 0, 16, 0, 16, 48, 48, 48, 48, 0, 64, 0, 64, 64, 64, 64, 0, 64, 0, 0 )
-
 [sub_resource type="ConvexPolygonShape2D" id=22]
 points = PoolVector2Array( 16, 16, 16, 48, 64, 48, 64, 64, 0, 64, 0, 0, 64, 0, 64, 16, 64, 16 )
 
@@ -79,6 +76,9 @@ points = PoolVector2Array( 16, 0, 16, 0, 16, 64, 0, 64, 0, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=25]
 points = PoolVector2Array( 48, 0, 48, 0, 64, 0, 64, 64, 48, 64 )
+
+[sub_resource type="ConvexPolygonShape2D" id=28]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 48, 48, 48, 48, 0, 64, 0, 64, 64, 0, 64 )
 
 [resource]
 0/name = "Grass"
@@ -273,12 +273,6 @@ points = PoolVector2Array( 48, 0, 48, 0, 64, 0, 64, 64, 48, 64 )
 "shape": SubResource( 20 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
-"autotile_coord": Vector2( 6, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 21 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-}, {
 "autotile_coord": Vector2( 6, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
@@ -301,6 +295,12 @@ points = PoolVector2Array( 48, 0, 48, 0, 64, 0, 64, 64, 48, 64 )
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 25 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 6, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 28 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 2/z_index = 0
