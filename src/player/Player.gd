@@ -7,6 +7,19 @@ export var max_speed := 200.0
 
 var _velocity := Vector2.ZERO
 
+var gun: Gun
+var gunScene: PackedScene = preload("res://src/items/guns/Pistol.tscn")
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("right_trigger") && !gun:
+		gun = gunScene.instance()
+		$RightHand.add_child(gun)
+	
+	if event.get_action_strength("left_trigger") && gun:
+		gun.unhandled_input(event)
+	
+
 
 func _physics_process(delta: float) -> void:
 	var move := Vector2(
