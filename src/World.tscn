@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/tileset/map_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://src/player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/items/guns/Gun.tscn" type="PackedScene" id=3]
 
 [node name="World" type="Node2D"]
 
@@ -16,6 +17,9 @@ tile_set = ExtResource( 1 )
 collision_layer = 2
 format = 1
 tile_data = PoolIntArray( 196615, 1, 1114131, 262150, 3, 131076 )
+
+[node name="Gun" parent="." instance=ExtResource( 3 )]
+position = Vector2( 472, 223 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 491.789, 293.394 )
