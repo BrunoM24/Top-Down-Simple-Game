@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/tileset/map_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://src/player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/items/guns/Gun.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/items/guns/Pistol.tscn" type="PackedScene" id=3]
 
 [node name="World" type="Node2D"]
 
@@ -18,8 +18,8 @@ collision_layer = 2
 format = 1
 tile_data = PoolIntArray( 196615, 1, 1114131, 262150, 3, 131076 )
 
-[node name="Gun" parent="." instance=ExtResource( 3 )]
-position = Vector2( 472, 223 )
-
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 513.515, 317.366 )
+
+[node name="Pistol" parent="." instance=ExtResource( 3 )]
+position = Vector2( 471.636, 221.508 )
