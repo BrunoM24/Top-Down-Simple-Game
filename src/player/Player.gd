@@ -53,6 +53,11 @@ func _movement_logi() -> void:
 func _interact() -> void:
 	if pickableObject:
 		print("pickup item")
+		gun = pickableObject
+		gun.get_parent().remove_child(gun)
+		$RightHand.add_child(gun)
+		gun.position = Vector2.ZERO
+		gun.equiped = true
 
 
 func _on_PickableArea_area_entered(area: Area2D) -> void:
