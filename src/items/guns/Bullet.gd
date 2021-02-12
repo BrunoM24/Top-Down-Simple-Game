@@ -13,3 +13,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	position += direction.normalized() * bullet_speed * delta
+
+
+func _on_screen_exited() -> void:
+	queue_free()
