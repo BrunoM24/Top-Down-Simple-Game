@@ -7,6 +7,7 @@ export var automatic: bool
 onready var sprite: Sprite = $Sprite
 
 var pickable := false setget set_pickable
+var equiped := false setget set_equiped
 
 func _ready() -> void:
 	sprite.texture = image
@@ -28,3 +29,8 @@ func _fire() -> void:
 func set_pickable(value: bool) -> void:
 	pickable = value
 	$Label.visible = pickable
+
+
+func set_equiped(value: bool) -> void:
+	set_pickable(!value)
+	$ItemArea.monitorable = !value
