@@ -52,7 +52,6 @@ func _movement_logi() -> void:
 
 func _interact() -> void:
 	if pickableObject:
-		print("pickup item")
 		gun = pickableObject
 		gun.get_parent().remove_child(gun)
 		$RightHand.add_child(gun)
