@@ -46,6 +46,7 @@ func _movement_logi() -> void:
 	_velocity = move_and_slide(_velocity)
 	
 	look_at(get_global_mouse_position())
+	$RightHand.look_at(get_global_mouse_position())
 
 
 func _interact() -> void:
