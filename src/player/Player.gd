@@ -9,7 +9,6 @@ export var max_speed := 200.0
 var _velocity := Vector2.ZERO
 
 var gun: Gun
-var gunScene: PackedScene = preload("res://src/items/guns/Pistol.tscn")
 
 var pickableObjects: Array
 var pickableObject: Node2D
@@ -17,8 +16,7 @@ var pickableObject: Node2D
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("right_trigger") && !gun:
-		gun = gunScene.instance()
-		$RightHand.add_child(gun)
+		pass
 	
 	if event.get_action_strength("left_trigger") && gun:
 		gun.unhandled_input(event)
