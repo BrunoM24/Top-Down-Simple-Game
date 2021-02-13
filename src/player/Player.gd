@@ -61,6 +61,7 @@ func _interact() -> void:
 			gun.get_parent().remove_child(gun)
 			pickableObject.get_parent().add_child(gun)
 			gun.position = pickableObject.position
+			gun.equiped = false
 			_equip()
 
 
