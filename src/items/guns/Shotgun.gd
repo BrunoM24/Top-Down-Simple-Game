@@ -6,4 +6,6 @@ func unhandled_input(event: InputEvent) -> void:
 
 
 func _fire() -> void:
-	print("firing the shotgun")
+	for i in 5:
+		_spawn_bullet(randi() % 50 - 25)
+	
