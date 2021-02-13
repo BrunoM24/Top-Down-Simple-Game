@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/tileset/map_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://src/player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/items/guns/Pistol.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/items/guns/Shotgun.tscn" type="PackedScene" id=4]
 
 [node name="World" type="Node2D"]
 
@@ -24,8 +25,8 @@ position = Vector2( 513.515, 317.366 )
 [node name="Pistol" parent="." instance=ExtResource( 3 )]
 position = Vector2( 156.224, 158.651 )
 
-[node name="Pistol2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 153.979, 286.611 )
+[node name="Shotgun" parent="." instance=ExtResource( 4 )]
+position = Vector2( 149.494, 288.19 )
 
 [node name="Pistol3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 157.346, 412.327 )
