@@ -16,10 +16,16 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 3, 2, 0, 2, 3, 0, 1, 4, 0, 1, 5, 0, 3, 
 tile_set = ExtResource( 1 )
 collision_layer = 2
 format = 1
-tile_data = PoolIntArray( 131074, -1073741823, 1114131, 196615, 1, 1114131, 262146, -1073741823, 1114131, 262150, 3, 131076, 393218, -1073741823, 1114131 )
+tile_data = PoolIntArray( 131074, -1073741823, 1114131, 262146, -1073741823, 1114131, 262150, 3, 131076, 393218, -1073741823, 1114131 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 513.515, 317.366 )
 
 [node name="Pistol" parent="." instance=ExtResource( 3 )]
-position = Vector2( 471.636, 221.508 )
+position = Vector2( 156.224, 158.651 )
+
+[node name="Pistol2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 153.979, 286.611 )
+
+[node name="Pistol3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 157.346, 412.327 )
