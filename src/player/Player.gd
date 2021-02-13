@@ -12,7 +12,7 @@ var gun: Gun
 var gunScene: PackedScene = preload("res://src/items/guns/Pistol.tscn")
 
 var pickableObjects: Array
-var pickableObject
+var pickableObject: Node2D
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -54,16 +54,22 @@ func _interact() -> void:
 	if pickableObject:
 		if !gun:
 			#pickup gun
+			_equip()
 			
-			gun = pickableObject
-			gun.get_parent().remove_child(gun)
-			$RightHand.add_child(gun)
-			gun.position = Vector2.ZERO
-			gun.equiped = true
 		else:
 			#swap gun
-			
-			pass
+			gun.get_parent().remove_child(gun)
+			pickableObject.get_parent().add_child(gun)
+			gun.position = pickableObject.position
+			_equip()
+
+
+func _equip(item: Node2D = pickableObject) -> void:
+	gun = item
+	gun.get_parent().remove_child(gun)
+	$RightHand.add_child(gun)
+	gun.position = Vector2.ZERO
+	gun.equiped = true
 
 
 func _on_PickableArea_area_entered(area: Area2D) -> void:
