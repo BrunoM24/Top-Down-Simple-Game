@@ -27,10 +27,14 @@ func physics_process(delta: float) -> void:
 
 
 func _fire() -> void:
+	_spawn_bullet()
+
+
+func _spawn_bullet(angle := 0) -> void:
 	var bullet : Area2D = bulletScene.instance()
 	add_child(bullet)
 	bullet.global_position = $BarrelPosition.global_position
-	bullet.direction = $BarrelPosition.global_position.direction_to(get_global_mouse_position())
+	bullet.direction = $BarrelPosition.global_position.direction_to(get_global_mouse_position().rotated(deg2rad(angle)))
 	bullet.look_at(bullet.direction + bullet.global_position)
 
 
