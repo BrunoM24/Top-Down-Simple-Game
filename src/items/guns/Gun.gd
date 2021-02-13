@@ -1,6 +1,7 @@
 extends Node2D
 class_name Gun
 
+
 export var image: Texture
 export var automatic: bool
 
@@ -8,6 +9,9 @@ onready var sprite: Sprite = $Sprite
 
 var pickable := false setget set_pickable
 var equiped := false setget set_equiped
+
+var bulletScene: PackedScene = preload("res://src/items/guns/Bullet.tscn")
+
 
 func _ready() -> void:
 	sprite.texture = image
@@ -23,7 +27,11 @@ func physics_process(delta: float) -> void:
 
 
 func _fire() -> void:
-	pass
+	var bullet : Area2D = bulletScene.instance()
+	add_child(bullet)
+	bullet.global_position = $BarrelPosition.global_position
+	bullet.direction = $BarrelPosition.global_position.direction_to(get_global_mouse_position())
+	bullet.look_at(bullet.direction + bullet.global_position)
 
 
 func set_pickable(value: bool) -> void:
