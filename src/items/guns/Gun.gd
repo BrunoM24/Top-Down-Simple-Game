@@ -14,7 +14,9 @@ var bulletScene: PackedScene = preload("res://src/items/guns/Bullet.tscn")
 
 
 func _ready() -> void:
-	sprite.texture = image
+	if image:
+		sprite.texture = image
+	
 	$Label.visible = false
 
 
