@@ -6,6 +6,8 @@ export var image: Texture
 export var automatic: bool
 
 onready var sprite: Sprite = $Sprite
+onready var label: Label = $Label
+onready var barrel: Position2D = $BarrelPosition
 
 var pickable := false setget set_pickable
 var equiped := false setget set_equiped
@@ -17,7 +19,8 @@ func _ready() -> void:
 	if image:
 		sprite.texture = image
 	
-	$Label.visible = false
+	label.visible = false
+	set_physics_process(false)
 
 
 func unhandled_input(event: InputEvent) -> void:
@@ -35,16 +38,18 @@ func _fire() -> void:
 func _spawn_bullet(angle := 0) -> void:
 	var bullet : Area2D = bulletScene.instance()
 	add_child(bullet)
-	bullet.global_position = $BarrelPosition.global_position
-	bullet.direction = $BarrelPosition.global_position.direction_to(get_global_mouse_position()).rotated(deg2rad(angle))
+	bullet.global_position = barrel.global_position
+	bullet.direction = barrel.global_position.direction_to(get_global_mouse_position()).rotated(deg2rad(angle))
 	bullet.look_at(bullet.direction + bullet.global_position)
 
 
 func set_pickable(value: bool) -> void:
 	pickable = value
-	$Label.visible = pickable
+	label.visible = pickable
 
 
 func set_equiped(value: bool) -> void:
+	equiped = value
 	set_pickable(!value)
+	set_physics_process(value)
 	$ItemArea.monitorable = !value
