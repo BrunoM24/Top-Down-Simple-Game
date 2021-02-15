@@ -5,6 +5,9 @@ class_name Gun
 export var image: Texture
 export var automatic: bool
 
+export var magazine_size : int = 8
+export var bullets : int = magazine_size
+
 onready var sprite: Sprite = $Sprite
 onready var label: Label = $Label
 onready var barrel: Position2D = $BarrelPosition
@@ -32,7 +35,9 @@ func physics_process(delta: float) -> void:
 
 
 func _fire() -> void:
-	_spawn_bullet()
+	if bullets > 0:
+		_spawn_bullet()
+		bullets -= 1
 
 
 func _spawn_bullet(angle := 0) -> void:
