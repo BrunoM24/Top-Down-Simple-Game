@@ -17,3 +17,7 @@ func _process(delta: float) -> void:
 
 func _on_screen_exited() -> void:
 	queue_free()
+
+
+func _on_body_entered(body: Node) -> void:
+	queue_free()
