@@ -18,7 +18,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("right_trigger") && !gun:
 		pass
 	
-	if event.get_action_strength("left_trigger") && gun:
+	if event.is_action_pressed("left_trigger") && gun:
 		gun.unhandled_input(event)
 	
 	if event.is_action_pressed("interact"):
