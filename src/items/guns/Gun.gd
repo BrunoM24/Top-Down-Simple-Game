@@ -24,6 +24,8 @@ func _ready() -> void:
 	
 	label.visible = false
 	set_physics_process(false)
+	
+	bullets = magazine_size
 
 
 func unhandled_input(event: InputEvent) -> void:
