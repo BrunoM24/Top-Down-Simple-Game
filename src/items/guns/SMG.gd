@@ -11,8 +11,9 @@ func _physics_process(delta: float) -> void:
 
 
 func _fire() -> void:
-	if can_shoot:
+	if can_shoot && bullets > 0:
 		_spawn_bullet()
+		bullets -= 1
 		can_shoot = false
 		yield(get_tree().create_timer(0.1), "timeout")
 		can_shoot = true

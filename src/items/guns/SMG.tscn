@@ -7,6 +7,7 @@
 [node name="SMG" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
 image = null
+magazine_size = 32
 
 [node name="BarrelPosition" parent="." index="0"]
 position = Vector2( 20, 0 )
