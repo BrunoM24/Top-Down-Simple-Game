@@ -20,4 +20,7 @@ func _on_screen_exited() -> void:
 
 
 func _on_body_entered(body: Node) -> void:
+	if body.has_method("damage"):
+		body.damage(damage)
+	
 	queue_free()
