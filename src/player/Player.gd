@@ -15,14 +15,14 @@ var pickableObject: Node2D
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("right_trigger") && !gun:
-		pass
-	
 	if event.is_action_pressed("left_trigger") && gun:
 		gun.unhandled_input(event)
 	
 	if event.is_action_pressed("interact"):
 		_interact()
+	
+	if event.is_action_pressed("reload") && gun:
+		gun.reload()
 	
 
 
