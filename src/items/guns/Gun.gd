@@ -50,6 +50,10 @@ func _spawn_bullet(angle := 0) -> void:
 	bullet.look_at(bullet.direction + bullet.global_position)
 
 
+func reload() -> void:
+	bullets = magazine_size
+
+
 func set_pickable(value: bool) -> void:
 	pickable = value
 	label.visible = pickable
