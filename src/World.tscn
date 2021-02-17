@@ -35,3 +35,54 @@ position = Vector2( 155.385, 418.083 )
 
 [node name="Zombie" parent="." instance=ExtResource( 6 )]
 position = Vector2( -426.982, 284.763 )
+
+[node name="Zombie2" parent="." instance=ExtResource( 6 )]
+position = Vector2( -426.982, 336.763 )
+
+[node name="Zombie3" parent="." instance=ExtResource( 6 )]
+position = Vector2( -426.982, 392.763 )
+
+[node name="Zombie4" parent="." instance=ExtResource( 6 )]
+position = Vector2( -426.982, 440.763 )
+
+[node name="Zombie5" parent="." instance=ExtResource( 6 )]
+position = Vector2( -426.982, 232.763 )
+
+[node name="Zombie6" parent="." instance=ExtResource( 6 )]
+position = Vector2( -426.982, 174.763 )
+
+[node name="Zombie7" parent="." instance=ExtResource( 6 )]
+position = Vector2( -384.982, 284.763 )
+
+[node name="Zombie8" parent="." instance=ExtResource( 6 )]
+position = Vector2( -384.982, 336.763 )
+
+[node name="Zombie9" parent="." instance=ExtResource( 6 )]
+position = Vector2( -384.982, 392.763 )
+
+[node name="Zombie10" parent="." instance=ExtResource( 6 )]
+position = Vector2( -384.982, 440.763 )
+
+[node name="Zombie11" parent="." instance=ExtResource( 6 )]
+position = Vector2( -384.982, 232.763 )
+
+[node name="Zombie12" parent="." instance=ExtResource( 6 )]
+position = Vector2( -384.982, 174.763 )
+
+[node name="Zombie13" parent="." instance=ExtResource( 6 )]
+position = Vector2( -476.982, 284.763 )
+
+[node name="Zombie14" parent="." instance=ExtResource( 6 )]
+position = Vector2( -476.982, 336.763 )
+
+[node name="Zombie15" parent="." instance=ExtResource( 6 )]
+position = Vector2( -476.982, 392.763 )
+
+[node name="Zombie16" parent="." instance=ExtResource( 6 )]
+position = Vector2( -476.982, 440.763 )
+
+[node name="Zombie17" parent="." instance=ExtResource( 6 )]
+position = Vector2( -476.982, 232.763 )
+
+[node name="Zombie18" parent="." instance=ExtResource( 6 )]
+position = Vector2( -476.982, 174.763 )
