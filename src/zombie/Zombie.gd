@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 
-export var max_health := 20
+export var max_health := 100
 
 var health := max_health
 
