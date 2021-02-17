@@ -6,6 +6,6 @@ func _fire() -> void:
 		return
 	
 	for i in 5:
-		_spawn_bullet(randi() % 40 - 20)
+		_spawn_bullet(randi() % 20 - 10)
 	
 	bullets -= 1
