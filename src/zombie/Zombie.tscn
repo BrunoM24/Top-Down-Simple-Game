@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/characters/zombie_1/zoimbie1_stand.png" type="Texture" id=1]
 [ext_resource path="res://src/zombie/Zombie.gd" type="Script" id=2]
+[ext_resource path="res://src/particles/BloodParticles.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 height = 23.6481
@@ -10,6 +11,7 @@ height = 23.6481
 collision_layer = 16
 collision_mask = 8
 script = ExtResource( 2 )
+blood_particles_scene = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
