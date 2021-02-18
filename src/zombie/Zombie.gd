@@ -16,6 +16,9 @@ func damage(value: int) -> void:
 
 
 func die() -> void:
+	var blood_trail = preload("res://src/effects/BloodTrail.tscn").instance()
+	blood_trail.global_position = global_position
+	get_parent().add_child(blood_trail)
 	queue_free()
 
 
