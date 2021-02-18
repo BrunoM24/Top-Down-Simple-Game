@@ -43,6 +43,7 @@ func _fire() -> void:
 
 
 func _spawn_bullet(angle := 0) -> void:
+	$BarrelPosition/Particles2D.restart()
 	var bullet : Area2D = bulletScene.instance()
 	add_child(bullet)
 	bullet.global_position = barrel.global_position
