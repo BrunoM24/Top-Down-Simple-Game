@@ -22,6 +22,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		_interact()
 	
 	if event.is_action_pressed("reload") && gun:
+		$AnimationPlayer.play("reload_gun")
+		yield($AnimationPlayer, "animation_finished")		
 		gun.reload()
 	
 
