@@ -3,6 +3,7 @@ extends KinematicBody2D
 
 onready var sprite: Sprite = $Sprite
 onready var pickableArea: Area2D = $PickableArea
+onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 export var max_speed := 200.0
 
@@ -22,8 +23,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		_interact()
 	
 	if event.is_action_pressed("reload") && gun:
-		$AnimationPlayer.play("reload_gun")
-		yield($AnimationPlayer, "animation_finished")		
+		animation_player.play("reload_gun")
+		yield(animation_player, "animation_finished")
 		gun.reload()
 	
 
