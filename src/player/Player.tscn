@@ -11,7 +11,7 @@ height = 18.0088
 
 [sub_resource type="Animation" id=3]
 resource_name = "reload_gun"
-length = 1.5
+length = 1.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("RightHand:rotation_degrees")
 tracks/0/interp = 1
@@ -19,7 +19,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 1.2, 1.5 ),
+"times": PoolRealArray( 0, 0.2, 1, 1.2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, -90.0, -90.0, 0.0 ]
