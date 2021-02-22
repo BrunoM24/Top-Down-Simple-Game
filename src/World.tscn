@@ -72,19 +72,19 @@ position = Vector2( -384.982, 232.763 )
 position = Vector2( -384.982, 174.763 )
 
 [node name="Zombie13" parent="Enemies" instance=ExtResource( 6 )]
-position = Vector2( -32.5097, -126.374 )
+position = Vector2( -476.982, 284.763 )
 
 [node name="Zombie14" parent="Enemies" instance=ExtResource( 6 )]
-position = Vector2( -32.5097, -74.3738 )
+position = Vector2( -476.982, 336.763 )
 
 [node name="Zombie15" parent="Enemies" instance=ExtResource( 6 )]
-position = Vector2( -32.5097, -18.3738 )
+position = Vector2( -476.982, 392.763 )
 
 [node name="Zombie16" parent="Enemies" instance=ExtResource( 6 )]
-position = Vector2( -32.5097, 29.6262 )
+position = Vector2( -476.982, 440.763 )
 
 [node name="Zombie17" parent="Enemies" instance=ExtResource( 6 )]
-position = Vector2( -32.5097, -178.374 )
+position = Vector2( -476.982, 232.763 )
 
 [node name="Zombie18" parent="Enemies" instance=ExtResource( 6 )]
-position = Vector2( -32.5097, -236.374 )
+position = Vector2( -476.982, 174.763 )
