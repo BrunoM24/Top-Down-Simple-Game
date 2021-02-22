@@ -38,6 +38,7 @@ func physics_process(delta: float) -> void:
 
 func _fire() -> void:
 	if bullets > 0:
+		$AudioStreamPlayer2D.play()
 		_spawn_bullet()
 		bullets -= 1
 
@@ -65,3 +66,8 @@ func set_equiped(value: bool) -> void:
 	set_pickable(!value)
 	set_physics_process(value)
 	$ItemArea.monitorable = !value
+
+
+func _on_AudioStreamPlayer2D_finished() -> void:
+	print("stop sound")
+	$AudioStreamPlayer2D.stop()
