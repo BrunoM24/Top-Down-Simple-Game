@@ -67,7 +67,3 @@ func set_equiped(value: bool) -> void:
 	set_physics_process(value)
 	$ItemArea.monitorable = !value
 
-
-func _on_AudioStreamPlayer2D_finished() -> void:
-	print("stop sound")
-	$AudioStreamPlayer2D.stop()
