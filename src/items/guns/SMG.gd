@@ -12,6 +12,7 @@ func _physics_process(delta: float) -> void:
 
 func _fire() -> void:
 	if can_shoot && bullets > 0:
+		$AudioStreamPlayer2D.play()
 		_spawn_bullet()
 		bullets -= 1
 		can_shoot = false
