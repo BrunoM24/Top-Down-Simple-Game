@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/tileset/map_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://src/player/Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://src/items/guns/Shotgun.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/items/guns/SMG.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/zombie/Zombie.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/items/Backpack.tscn" type="PackedScene" id=7]
 
 [node name="World" type="Node2D"]
 
@@ -88,3 +89,6 @@ position = Vector2( -476.982, 232.763 )
 
 [node name="Zombie18" parent="Enemies" instance=ExtResource( 6 )]
 position = Vector2( -476.982, 174.763 )
+
+[node name="Backpack" parent="." instance=ExtResource( 7 )]
+position = Vector2( 608.5, 352 )
