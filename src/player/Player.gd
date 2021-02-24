@@ -83,11 +83,17 @@ func _equip(item: Node2D = pickableObject) -> void:
 
 
 func _on_PickableArea_area_entered(area: Area2D) -> void:
+	if !area.get_parent().has_method('set_pickable'):
+		return
+	
 	if !pickableObject:
 		pickableObject = area.get_parent()
 		pickableObject.pickable = true
 
 
 func _on_PickableArea_area_exited(area: Area2D) -> void:
+	if !area.get_parent().has_method('set_pickable'):
+		return
+	
 	area.get_parent().pickable = false
 	pickableObject = null
