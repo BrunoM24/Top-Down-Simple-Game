@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 
 onready var sprite: Sprite = $Sprite
+onready var backpackSprite: Sprite = $Backpack
 onready var pickableArea: Area2D = $PickableArea
 onready var animation_player: AnimationPlayer = $AnimationPlayer
 
@@ -11,8 +12,14 @@ var _velocity := Vector2.ZERO
 
 var gun: Gun
 
+var backpack_equiped: bool = false
+
 var pickableObjects: Array
 var pickableObject: Node2D
+
+
+func _ready() -> void:
+	backpackSprite.visible = backpack_equiped
 
 
 func _unhandled_input(event: InputEvent) -> void:
